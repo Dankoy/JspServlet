@@ -13,7 +13,14 @@ public class XMLServlet extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		String userName = request.getParameter("userName");
-		out.println("Hello! " + userName);
+		out.println("Hello from doGet() method, " + userName);
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		String userName = request.getParameter("userName");
+		out.println("Hello from doPost() method, " + userName);
 	}
 	
 }
