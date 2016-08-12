@@ -14,7 +14,7 @@ public class XMLServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String userName = request.getParameter("userName");
 		String fullName = request.getParameter("fullName");
-		out.println("Hello from doGet() method, " + userName);
+		out.println("<h2>Hello from doGet() method, " + userName + "!</h2>");
 		out.println("<h3>We know your full name: " + fullName + "</h3>");
 		
 		String prof = request.getParameter("prof");
