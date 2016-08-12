@@ -40,6 +40,14 @@ public class XMLServlet extends HttpServlet {
 		
 		String prof = request.getParameter("prof");
 		out.println("You are a " + prof);
+		
+		String[] location = request.getParameterValues("location");
+		out.println("<p>You are at " + location.length + "places</p>");
+		
+		for(int i = 0; i < location.length; i++) {
+			out.println(location[i]);
+		}
+		
 	}
 	
 }
