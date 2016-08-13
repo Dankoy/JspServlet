@@ -31,6 +31,7 @@ public class SimpleServlet extends HttpServlet implements Servlet {
 		HttpSession session = request.getSession();
 		if (user != "" && user != null) {
 			session.setAttribute("savedUser", user);
+			session.setMaxInactiveInterval(10);
 		}
 		out.println("<h3>Hello in html " + user + "</h3>");
 		out.println("Saved attribute in session: " + (String)session.getAttribute("savedUser"));
