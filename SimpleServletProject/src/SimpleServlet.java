@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class SimpleServlet
@@ -22,8 +23,17 @@ public class SimpleServlet extends HttpServlet implements Servlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Hello from GET Method!");
-		PrintWriter writer = response.getWriter();
-		writer.println("<h3>Hello in html</h3>");
+		response.setContentType("text/html");
+		
+		PrintWriter out = response.getWriter();
+		
+		String user = request.getParameter("user");
+		HttpSession session = request.getSession();
+		if (user != "" && user != null) {
+			session.setAttribute("savedUser", user);
+		}
+		out.println("<h3>Hello in html " + user + "</h3>");
+		out.println("Saved attribute in session: " + (String)session.getAttribute("savedUser"));
 	}
 
 }
