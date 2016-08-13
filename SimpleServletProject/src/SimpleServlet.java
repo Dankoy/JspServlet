@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.Servlet;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,12 +30,18 @@ public class SimpleServlet extends HttpServlet implements Servlet {
 		
 		String user = request.getParameter("user");
 		HttpSession session = request.getSession();
+		
+		ServletContext context = request.getServletContext();
+		
 		if (user != "" && user != null) {
-			session.setAttribute("savedUser", user);
+			session.setAttribute("savedUser", user);	// Save parameter only for particular client
 			session.setMaxInactiveInterval(10);
+			context.setAttribute("savedUser", user); 	// Save parameter across the application. Not only one browser
 		}
 		out.println("<h3>Hello in html " + user + "</h3>");
-		out.println("Saved attribute in session: " + (String)session.getAttribute("savedUser"));
+		out.println("Saved attribute in session: " + (String)session.getAttribute("savedUser") + "<br>");
+		out.println("Saved attribute in context: " + (String)context.getAttribute("savedUser"));
+
 	}
 
 }
