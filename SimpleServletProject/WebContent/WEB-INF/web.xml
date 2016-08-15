@@ -9,10 +9,22 @@
   	<servlet-name>xmlServlet</servlet-name>
   	<servlet-class>XMLServlet</servlet-class>
   </servlet>
-  
   <servlet-mapping>
   	<servlet-name>xmlServlet</servlet-name>
   	<url-pattern>/xmlservlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>simpleservlet</servlet-name>
+  	<servlet-class>SimpleServlet</servlet-class>
+  		<init-param>
+  			<param-name>defaultUser</param-name>
+  			<param-value>Unknown</param-value>
+  		</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>simpleservlet</servlet-name>
+  	<url-pattern>/SimpleServletPath</url-pattern>
   </servlet-mapping>
   
 </web-app>

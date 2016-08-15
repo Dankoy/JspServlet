@@ -16,9 +16,9 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class SimpleServlet
  */
-@WebServlet(description = "A simple servlet", urlPatterns = { "/SimpleServletPath" },
+/*@WebServlet(description = "A simple servlet", urlPatterns = { "/SimpleServletPath" },
 	initParams={@WebInitParam(name = "defaultUser", value = "Unknown")}
-)
+) */
 public class SimpleServlet extends HttpServlet implements Servlet {
 	private static final long serialVersionUID = 1L;
 
