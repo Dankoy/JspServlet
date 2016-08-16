@@ -16,17 +16,6 @@ public class Ordering extends HttpServlet implements Servlet {
 		
 		PrintWriter out = response.getWriter();
 		
-/*		String itemNum = request.getParameter("itemNum");
-		String description = request.getParameter("description");
-		String price = request.getParameter("price");
-		
-		String firstName = request.getParameter("firstName");
-		String lastName = request.getParameter("lastName");
-		String address = request.getParameter("address");
-		
-		String cardType = request.getParameter("cardType");
-		String cardNum = request.getParameter("cardNum");	*/
-		
 		String docType = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 " + "Transitional//EN\">\n";
 		String title = "Reading All Request Parameters";
 		
