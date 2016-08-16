@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ShowAllHeaders
+ * Servlet which allow you to look at headers from request
  */
 
 public class ShowAllHeaders extends HttpServlet {
