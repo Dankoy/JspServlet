@@ -33,11 +33,13 @@ public class ShowAllHeaders extends HttpServlet {
 				"<html>\n" + 
 				"<head><title>" + title + "</title></head>\n" + 
 				"<body>\n" + 
-				"<h1 align = \"center\">" + title + "</h1>\n" + 
-				"<b>Request Method: </b>" + request.getMethod() + "<br>" + 
-				"<b>Request URI: </b>" + request.getRequestURI() + "<br>" + 
-				"<b>Request URL: </b>" + request.getRequestURL() + "<br>" + 
-				"<b>Request Protocol: </b>" + request.getProtocol() + "<br>" +
+				"<h1 align = \"center\">" + title + "</h1>\n" +
+				"<div style =\"margin-left: 20%\">\n" +
+				"<b>Request Method: </b>" + request.getMethod() + "<br>\n" + 
+				"<b>Request URI: </b>" + request.getRequestURI() + "<br>\n" + 
+				"<b>Request URL: </b>" + request.getRequestURL() + "<br>\n" + 
+				"<b>Request Protocol: </b>" + request.getProtocol() + "<br>\n" +
+				"</div>\n" +
 				"<TABLE BORDER=1 ALIGN=\"CENTER\">\n" +
                 "<TR BGCOLOR=\"#FFAD00\">\n" +
                 "<TH>Header Name<TH>Header Value");
