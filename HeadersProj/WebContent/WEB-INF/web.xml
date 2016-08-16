@@ -3,10 +3,15 @@
   <display-name>HeadersProj</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>showheaders</servlet-name>
+  	<servlet-class>ShowAllHeaders</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>showheaders</servlet-name>
+  	<url-pattern>/showallheaders</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
