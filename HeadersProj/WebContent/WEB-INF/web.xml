@@ -6,12 +6,20 @@
   </welcome-file-list>
   
   <servlet>
-  	<servlet-name>showheaders</servlet-name>
-  	<servlet-class>ShowAllHeaders</servlet-class>
+    <servlet-name>showheaders</servlet-name>
+    <servlet-class>ShowAllHeaders</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>showheaders</servlet-name>
-  	<url-pattern>/showallheaders</url-pattern>
+    <servlet-name>showheaders</servlet-name>
+    <url-pattern>/showallheaders</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>AgentChecker</servlet-name>
+  	<servlet-class>UserAgentChecker</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AgentChecker</servlet-name>
+  	<url-pattern>/agentchecker</url-pattern>
+  </servlet-mapping>
 </web-app>
