@@ -15,11 +15,20 @@
   </servlet-mapping>
   
   <servlet>
-  	<servlet-name>AgentChecker</servlet-name>
-  	<servlet-class>UserAgentChecker</servlet-class>
+    <servlet-name>AgentChecker</servlet-name>
+    <servlet-class>UserAgentChecker</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>AgentChecker</servlet-name>
-  	<url-pattern>/agentchecker</url-pattern>
+    <servlet-name>AgentChecker</servlet-name>
+    <url-pattern>/agentchecker</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>RedirectToIndex</servlet-name>
+  	<servlet-class>Redirection</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RedirectToIndex</servlet-name>
+  	<url-pattern>/redirecthere</url-pattern>
   </servlet-mapping>
 </web-app>
