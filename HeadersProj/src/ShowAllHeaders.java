@@ -29,7 +29,8 @@ public class ShowAllHeaders extends HttpServlet {
 		String title = "Servlet that show you request headers";
 		String docType = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 5.0 " + "Transitional//EN\">\n";
 		
-		out.println(docType + 
+		try {
+			out.println(docType + 
 				"<html>\n" + 
 				"<head><title>" + title + "</title></head>\n" + 
 				"<body>\n" + 
@@ -44,15 +45,16 @@ public class ShowAllHeaders extends HttpServlet {
                 "<TR BGCOLOR=\"#FFAD00\">\n" +
                 "<TH>Header Name<TH>Header Value");
 		
-		Enumeration<String> headerNames = request.getHeaderNames();
-			while(headerNames.hasMoreElements()) {
+			Enumeration<String> headerNames = request.getHeaderNames();
+				while(headerNames.hasMoreElements()) {
 					String headerName = headerNames.nextElement();
 					out.println("<TR><TD>" + headerName);
 					out.println("    <TD>" + request.getHeader(headerName));
 			}
-			
 			out.println("</TABLE>\n</BODY></HTML>");
-		
 		}
-	
+		finally {
+			out.close();
+		}
+	}
 }
