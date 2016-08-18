@@ -19,7 +19,8 @@ public class Ordering extends HttpServlet implements Servlet {
 		String docType = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 " + "Transitional//EN\">\n";
 		String title = "Reading All Request Parameters";
 		
-		out.println(docType +
+		try {
+			out.println(docType +
                 "<HTML>\n" +
                 "<HEAD><TITLE>" + title + "</TITLE></HEAD>\n" +
                 "<BODY BGCOLOR=\"#FDF5E6\">\n" +
@@ -28,27 +29,32 @@ public class Ordering extends HttpServlet implements Servlet {
                 "<TR BGCOLOR=\"#FFAD00\">\n" +
                 "<TH>Parameter Name<TH>Parameter Value(s)");
 		
-		Enumeration<String> paramNames = request.getParameterNames();
-	    while(paramNames.hasMoreElements()) {
-	      String paramName = paramNames.nextElement();
-	      out.print("<TR><TD>" + paramName + "\n<TD>");
-	      String[] paramValues =
-	        request.getParameterValues(paramName);
-	      if (paramValues.length == 1) {
-	        String paramValue = paramValues[0];
-	        if (paramValue.length() == 0)
-	          out.println("<I>No Value</I>");
-	        else
-	          out.println(paramValue);
-	      } else {
-	        out.println("<UL>");
-	        for(int i=0; i<paramValues.length; i++) {
-	          out.println("<LI>" + paramValues[i]);
-	        }
-	        out.println("</UL>");
-	      }
-	    }
-	    out.println("</TABLE>\n</BODY></HTML>");
+			Enumeration<String> paramNames = request.getParameterNames();
+				while(paramNames.hasMoreElements()) {
+					String paramName = paramNames.nextElement();
+					out.print("<TR><TD>" + paramName + "\n<TD>");
+					String[] paramValues = request.getParameterValues(paramName);
+					
+					if (paramValues.length == 1) {
+							String paramValue = paramValues[0];
+							if (paramValue.length() == 0) {
+									out.println("<I>No Value</I>");
+							}
+							else {
+								out.println(paramValue);
+							}
+					} else {
+						out.println("<UL>");
+						for(int i=0; i<paramValues.length; i++) {
+							out.println("<LI>" + paramValues[i]);
+						}
+						out.println("</UL>");
+					}
+				}
+				out.println("</TABLE>\n</BODY></HTML>");
+		}
+		finally {
+			out.close();
+		}
 	}
-	
 }
