@@ -22,6 +22,7 @@ public class LongServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		long startTime = System.currentTimeMillis();
 		response.setContentType("text/html");
 		
 		String docType = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 5.0 Transitional//EN\">\n";
@@ -51,12 +52,21 @@ public class LongServlet extends HttpServlet {
 					"<h2 align = \"center\">" + title + "</h2>\n");
 		String line = "Let it be random words";
 		
+
 		for (int i = 0; i < 1000; i++) {
 			out.println(line);
 		}
 		
+		long endTime = System.currentTimeMillis();
+		long time = endTime - startTime;
+		
+		out.println("<p>Time spent for output: " + time + "ms</p>\n");
+		
 		out.println("</body></html>");
 		out.close();
+		
+		
+		
 
 	}
 
