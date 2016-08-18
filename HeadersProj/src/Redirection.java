@@ -30,26 +30,21 @@ public class Redirection extends HttpServlet {
 		
 		String ref = request.getHeader("Referer");
 		
-		if (ref != null && ref.contains("HeadersProj/index.html")) {
-			try {
+		try {
+			if (ref != null && ref.contains("HeadersProj/index.html")) {
 				out.println(docType + 
 						"<head><title>" + title + "</title></head>\n" +
 						"<body>\n" +
 						"<h1>You was not redirected to index. Good job!</h1>\n" + 
 						"</body>\n" + 
 						"</html>");
-			} 
-			finally {
-				out.close();
 			}
-		}
-		else {
-			try {
+			else {
 				response.sendRedirect("http://localhost:8080/HeadersProj/index.html");
 			}
-			finally {
-				out.close();
-			}
+		}
+		finally {
+			out.close();
 		}
 	}
 
