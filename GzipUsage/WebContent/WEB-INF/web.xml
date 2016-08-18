@@ -4,4 +4,13 @@
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>longpage</servlet-name>
+  	<servlet-class>LongServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>longpage</servlet-name>
+  	<url-pattern>/longpagepath</url-pattern>
+  </servlet-mapping>
 </web-app>
