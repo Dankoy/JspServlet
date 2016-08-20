@@ -3,10 +3,15 @@
   <display-name>ResponseHeaders</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>applesexcel</servlet-name>
+  	<servlet-class>ApplesAndOranges</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>applesexcel</servlet-name>
+  	<url-pattern>/aao</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
