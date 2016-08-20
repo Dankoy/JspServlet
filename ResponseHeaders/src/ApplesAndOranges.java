@@ -18,7 +18,8 @@ public class ApplesAndOranges extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		response.setContentType("application/vnd.ms-excel; charset=UTF-8");
+		response.setContentType("application/vnd.ms-excel; charset=Windows-1251");
+		response.setHeader("Content-Disposition", "attachment; filename=apples and oranges.xls");
 		PrintWriter out = response.getWriter();
 		
 		out.println("\tQ1\tQ2\tQ3\tQ4\tTotal");
