@@ -6,12 +6,22 @@
   </welcome-file-list>
   
   <servlet>
-  	<servlet-name>applesexcel</servlet-name>
-  	<servlet-class>ApplesAndOranges</servlet-class>
+    <servlet-name>applesexcel</servlet-name>
+    <servlet-class>ApplesAndOranges</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>applesexcel</servlet-name>
-  	<url-pattern>/aao</url-pattern>
+    <servlet-name>applesexcel</servlet-name>
+    <url-pattern>/aao</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>refreshme</servlet-name>
+  	<servlet-class>ReloadingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>refreshme</servlet-name>
+  	<url-pattern>/refreshing-page</url-pattern>
+  </servlet-mapping>
+  
   
 </web-app>
