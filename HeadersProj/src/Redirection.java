@@ -26,7 +26,7 @@ public class Redirection extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		String title = "Redirection Checker Servlet";
-		String docType = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 5.0 " + "Transitional//EN\">\n";
+		String docType = "<!DOCTYPE html>\n";
 		
 		String ref = request.getHeader("Referer");
 		

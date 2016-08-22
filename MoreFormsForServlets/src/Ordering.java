@@ -16,7 +16,7 @@ public class Ordering extends HttpServlet implements Servlet {
 		
 		PrintWriter out = response.getWriter();
 		
-		String docType = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 " + "Transitional//EN\">\n";
+		String docType = "<!DOCTYPE html>\n";
 		String title = "Reading All Request Parameters";
 		
 		try {

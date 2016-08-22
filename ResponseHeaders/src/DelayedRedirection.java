@@ -24,7 +24,7 @@ public class DelayedRedirection extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
-		String docType = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 5.0 Transitional//EN\">\n";
+		String docType = "<!DOCTYPE html>\n";
 		String title = null;
 		String message = null;
 		

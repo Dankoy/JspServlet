@@ -25,7 +25,7 @@ public class LongServlet extends HttpServlet {
 		long startTime = System.currentTimeMillis();
 		response.setContentType("text/html");
 		
-		String docType = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 5.0 Transitional//EN\">\n";
+		String docType = "<!DOCTYPE html>\n";
 		String title = null;
 		
 		PrintWriter out;

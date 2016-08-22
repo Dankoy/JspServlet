@@ -26,7 +26,7 @@ public class ReloadingServlet extends HttpServlet {
 		response.setContentType("text/html");
 		response.setIntHeader("Refresh", 5);
 		
-		String docType = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 5.0 " + "Transitional//EN\">\n";
+		String docType = "<!DOCTYPE html>\n";
 		String title = "Refreshing servlet";
 		
 		out.println(docType + 

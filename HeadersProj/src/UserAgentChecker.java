@@ -23,9 +23,7 @@ public class UserAgentChecker extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		response.setContentType("text/html");
-		String docType =
-			      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 " +
-			      "Transitional//EN\">\n";
+		String docType = "<!DOCTYPE html>\n";
 		PrintWriter out = response.getWriter();
 		
 		String title = null, message = null;

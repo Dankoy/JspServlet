@@ -27,7 +27,7 @@ public class ShowAllHeaders extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		String title = "Servlet that show you request headers";
-		String docType = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 5.0 " + "Transitional//EN\">\n";
+		String docType = "<!DOCTYPE html>\n";
 		
 		try {
 			out.println(docType + 
