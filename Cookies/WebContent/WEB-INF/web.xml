@@ -12,13 +12,21 @@
     <servlet-name>TestingCookie</servlet-name>
     <url-pattern>/active-cookies</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-  	<servlet-name>RepeatingVisit</servlet-name>
-  	<servlet-class>RepeatedVisitor</servlet-class>
+    <servlet-name>RepeatingVisit</servlet-name>
+    <servlet-class>RepeatedVisitor</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>RepeatingVisit</servlet-name>
-  	<url-pattern>/see-you-again</url-pattern>
+    <servlet-name>RepeatingVisit</servlet-name>
+    <url-pattern>/see-you-again</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>RepeatingVisit-v2</servlet-name>
+    <servlet-class>RepeatedVisitor2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RepeatingVisit-v2</servlet-name>
+    <url-pattern>/see-you-again-v2</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
