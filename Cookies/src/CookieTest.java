@@ -59,7 +59,7 @@ public class CookieTest extends HttpServlet {
 			}
 		}
 		out.println("</table></body></html>");
-		
+		out.close();
 	}
 
 }
