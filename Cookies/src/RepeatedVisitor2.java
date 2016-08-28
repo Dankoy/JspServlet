@@ -21,14 +21,14 @@ public class RepeatedVisitor2 extends HttpServlet {
 		String docType = "<!DOCTYPE html>\n";
 		PrintWriter out = response.getWriter();
 		
-		String value = CookieUtilities.getCookieValue(request, "repeatVisitor2", "no");
+		String value = CookieUtilities.getCookieValue(request, "repeatedVisitor2", "no");
 		
 		if(value.equals("yes")) {
 			noob = false;
 		}
 		
 		if(noob) {
-			Cookie returnVisitorCookie = new Cookie("repeatedVisitor", "yes");
+			Cookie returnVisitorCookie = new Cookie("repeatedVisitor2", "yes");
 			returnVisitorCookie.setMaxAge(10);
 			response.addCookie(returnVisitorCookie);
 			title = "Greetings Stranger, You've met with a terrible fate, haven't you?";
