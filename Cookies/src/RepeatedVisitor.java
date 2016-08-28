@@ -28,7 +28,7 @@ public class RepeatedVisitor extends HttpServlet {
 		Cookie[] cookies = request.getCookies();
 		if(cookies != null) {
 			for(Cookie cook: cookies) {
-				if(cook.getName().equals("repeatVisitor") && (cook.getValue().equals("yes"))) {
+				if(cook.getName().equals("repeatedVisitor") && (cook.getValue().equals("yes"))) {
 					noob = false;
 					break;
 				}
