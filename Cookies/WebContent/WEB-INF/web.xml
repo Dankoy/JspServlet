@@ -4,14 +4,21 @@
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
-  
   <servlet>
-  	<servlet-name>TestingCookie</servlet-name>
-  	<servlet-class>CookieTest</servlet-class>
+    <servlet-name>TestingCookie</servlet-name>
+    <servlet-class>CookieTest</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>TestingCookie</servlet-name>
-  	<url-pattern>/active-cookies</url-pattern>
+    <servlet-name>TestingCookie</servlet-name>
+    <url-pattern>/active-cookies</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>RepeatingVisit</servlet-name>
+  	<servlet-class>RepeatedVisitor</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RepeatingVisit</servlet-name>
+  	<url-pattern>/see-you-again</url-pattern>
+  </servlet-mapping>
 </web-app>
