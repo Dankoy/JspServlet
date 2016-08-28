@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class CookieTest
  */
-@WebServlet(description = "Testing Cookie", urlPatterns = { "/CookieTest" })
+@WebServlet(description = "Testing Cookie")
 public class CookieTest extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -22,7 +22,7 @@ public class CookieTest extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 2; i++) {
 			// Default maxAge is -1, indicating cookie applies only for current session 
 			Cookie cookie = new Cookie("Session-Cookie", "Cookie-Value-S" + i);
 			response.addCookie(cookie);
