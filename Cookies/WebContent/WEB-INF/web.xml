@@ -28,5 +28,12 @@
     <servlet-name>RepeatingVisit-v2</servlet-name>
     <url-pattern>/see-you-again-v2</url-pattern>
   </servlet-mapping>
-  
+  <servlet>
+  	<servlet-name>AccessCounter</servlet-name>
+  	<servlet-class>AccessCount</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AccessCounter</servlet-name>
+  	<url-pattern>/counter</url-pattern>
+  </servlet-mapping>
 </web-app>
