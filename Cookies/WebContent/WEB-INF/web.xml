@@ -29,11 +29,27 @@
     <url-pattern>/see-you-again-v2</url-pattern>
   </servlet-mapping>
   <servlet>
-  	<servlet-name>AccessCounter</servlet-name>
-  	<servlet-class>AccessCount</servlet-class>
+    <servlet-name>AccessCounter</servlet-name>
+    <servlet-class>AccessCount</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>AccessCounter</servlet-name>
-  	<url-pattern>/counter</url-pattern>
+    <servlet-name>AccessCounter</servlet-name>
+    <url-pattern>/counter</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>page-one</servlet-name>
+    <servlet-class>twopages.PageOne</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>page-one</servlet-name>
+    <url-pattern>/page-one</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>page-two</servlet-name>
+  	<servlet-class>twopages.SecondPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>page-two</servlet-name>
+  	<url-pattern>/page-two</url-pattern>
   </servlet-mapping>
 </web-app>
