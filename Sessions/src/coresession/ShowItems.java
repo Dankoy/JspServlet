@@ -32,6 +32,7 @@ public class ShowItems extends HttpServlet {
 				previousItems.add(newItem);
 			}
 			session.setAttribute("previousItems", previousItems);
+			session.setMaxInactiveInterval(10);
 			
 			response.setContentType("text/html");
 			PrintWriter out = response.getWriter();
