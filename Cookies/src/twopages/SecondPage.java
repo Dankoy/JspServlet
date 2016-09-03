@@ -31,9 +31,10 @@ public class SecondPage extends HttpServlet {
 		}
 		
 		if (isVisited == false) {
-			response.sendRedirect("/page-one");
+			response.sendRedirect("page-one");
 		}
 		else {
+			response.setContentType("text/html");
 			String title = "Second Page";
 			String docType = "<!DOCTYPE html>\n";
 			PrintWriter out = response.getWriter();
