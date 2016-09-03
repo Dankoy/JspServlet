@@ -5,11 +5,19 @@
     <welcome-file>index-core.html</welcome-file>
   </welcome-file-list>
   <servlet>
-  	<servlet-name>show-session</servlet-name>
-  	<servlet-class>coresession.ShowSession</servlet-class>
+    <servlet-name>show-session</servlet-name>
+    <servlet-class>coresession.ShowSession</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>show-session</servlet-name>
-  	<url-pattern>/show-session-info</url-pattern>
+    <servlet-name>show-session</servlet-name>
+    <url-pattern>/show-session-info</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>basket</servlet-name>
+  	<servlet-class>coresession.ShowItems</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>basket</servlet-name>
+  	<url-pattern>/show-items</url-pattern>
   </servlet-mapping>
 </web-app>
