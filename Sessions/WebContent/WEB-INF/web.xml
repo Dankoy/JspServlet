@@ -4,4 +4,12 @@
   <welcome-file-list>
     <welcome-file>index-core.html</welcome-file>
   </welcome-file-list>
+  <servlet>
+  	<servlet-name>show-session</servlet-name>
+  	<servlet-class>coresession.ShowSession</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>show-session</servlet-name>
+  	<url-pattern>/show-session-info</url-pattern>
+  </servlet-mapping>
 </web-app>
