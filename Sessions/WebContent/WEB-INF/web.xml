@@ -21,11 +21,19 @@
     <url-pattern>/show-items</url-pattern>
   </servlet-mapping>
   <servlet>
-  	<servlet-name>repeated-visitor</servlet-name>
-  	<servlet-class>coresession.RepeatedVisitor</servlet-class>
+    <servlet-name>repeated-visitor</servlet-name>
+    <servlet-class>coresession.RepeatedVisitor</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>repeated-visitor</servlet-name>
-  	<url-pattern>/repeated-visitor</url-pattern>
+    <servlet-name>repeated-visitor</servlet-name>
+    <url-pattern>/repeated-visitor</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>registration-with-session</servlet-name>
+  	<servlet-class>coresession.Registration</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>registration-with-session</servlet-name>
+  	<url-pattern>/registration</url-pattern>
   </servlet-mapping>
 </web-app>
