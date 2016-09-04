@@ -28,8 +28,8 @@ public class Registration extends HttpServlet {
 			return ("<font color = red><b>" + replacement + "</b></font>\n");
 		}
 	}
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		response.setContentType("text/html");
 		HttpSession session = request.getSession();
