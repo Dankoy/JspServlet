@@ -13,11 +13,19 @@
     <url-pattern>/show-session-info</url-pattern>
   </servlet-mapping>
   <servlet>
-  	<servlet-name>basket</servlet-name>
-  	<servlet-class>coresession.ShowItems</servlet-class>
+    <servlet-name>basket</servlet-name>
+    <servlet-class>coresession.ShowItems</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>basket</servlet-name>
-  	<url-pattern>/show-items</url-pattern>
+    <servlet-name>basket</servlet-name>
+    <url-pattern>/show-items</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>repeated-visitor</servlet-name>
+  	<servlet-class>coresession.RepeatedVisitor</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>repeated-visitor</servlet-name>
+  	<url-pattern>/repeated-visitor</url-pattern>
   </servlet-mapping>
 </web-app>
