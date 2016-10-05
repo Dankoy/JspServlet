@@ -17,5 +17,15 @@
 				JSP page use include directive to add another page in to itself as a footer. Addition happen in translation phase</li>
 		</ul>
 	</fieldset>
+	
+	<fieldset>
+		<legend>Links to two pages that use different include directives</legend>
+		<ul>
+			<li><a href = "/SimpleIntroToJSP/TwoPages/FirstPage.jsp">First Page</a>
+				This page use dynamic include directive that adds the content from the value of the page attribute to the current page at request time. For dynamic content coming from JSPs.</li>
+			<li><a href = "/SimpleIntroToJSP/TwoPages/SecondPage.jsp">Second Page</a>
+				This page use static include directive that adds the content from the value of the file attribute to the current page at translation time. For static layout templates, like HTML headers.</li>
+		</ul>
+	</fieldset>
 </body>
 </html>
