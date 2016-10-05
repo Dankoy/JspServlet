@@ -24,5 +24,7 @@
 	<p>More information here: <a href = "http://stackoverflow.com/questions/14580120/whats-the-difference-between-including-files-with-jsp-include-directive-jsp-in">StackOverflow</a></p>
 		
 	<jsp:include page = "/WEB-INF/include/RandomIntList.jsp" />
+	
+	<jsp:include page = "/WEB-INF/include/Footer.jsp"/>
 </body>
 </html>

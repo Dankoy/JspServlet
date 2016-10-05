@@ -24,5 +24,7 @@
 	<p>More information here: <a href = "http://stackoverflow.com/questions/14580120/whats-the-difference-between-including-files-with-jsp-include-directive-jsp-in">StackOverflow</a></p>
 	
 	<%@ include file = "/WEB-INF/include/RandomIntList.jsp" %>
+	
+	<%@ include file = "/WEB-INF/include/Footer.jsp" %>
 </body>
 </html>
